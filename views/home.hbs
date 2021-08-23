@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="contan">
+    <header>
+               <h1>Children's Toy Shop  </h1>
+    </header>
+    <main >
+    <form action="/index" method="post">
+    Picture <input type="text" name="txtPicture">
+    <br>
+    Name <input type="text" name="txtName">
+    <span>{{errworng}}</span>
+    <br>
+    Price <input type="text" name="txtPrice">
+    <br>
+    <input type="submit" value="Submit">
+    </form>
+    </main>
+    <div class="left">
+    <form action="/search" method="post">
+    Name
+    <br>
+    
+    <input type="t" name="txtSearch">
+    <input type="submit" value="search">
+    </form>
+    </div>
+    
+     
+     <article>
+         <h1 style="text-align: center; color:crimson" > Lists Toys</h1>
+         <table>
+             
+            <tr>
+             <th>Picture</th>
+             <th>Name</th>
+             <th>Price</th>
+             <th>Delete</th>
+             <th>Edit</th>
+            </tr>
+              {{#each data}}
+             <tr>
+                 <td> <img src="{{picture}}" width="150" height="100"> </td>
+                 <td> {{name}} </td>
+                 <td>{{price}} $ </td>
+                 <td> <a href="/delete?id={{_id}}"> Delete</a> </td>
+                 <td> <a href="/edit?id={{_id}}">Edit</a> </td>
+             </tr>
+             {{/each}}
+
+         </table>
+
+     </article>
+     <footer>
+         <h2>@Children's Toy Shop</h2>
+     
+ </footer>
+ </div>
+</body>
+</html>

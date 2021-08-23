@@ -1,0 +1,14 @@
+.eDit{
+    color: rgb(226, 43, 67);
+      border: 2px solid red;
+      text-align: center;
+      background-color: aquamarine;
+      padding: 10px;
+  }
+ .update {
+    color: blueviolet;
+      border: 2px solid red;
+      text-align: center;
+      background-color: aquamarine;
+      padding: 10px;
+  }
