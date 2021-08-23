@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 const {ObjectId, MongoClient} = require('mongodb')
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb+srv://nhanshoptoy:nhan123@cluster0.ra02h.mongodb.net/test';
 
 app.set('view engine', 'hbs');
 app.use(express.urlencoded({extended:true}))
